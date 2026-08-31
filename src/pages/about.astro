@@ -1,6 +1,6 @@
 ---
 import Base from "../layouts/Base.astro";
-import SiteHeader from "../components/SiteHeader.astro";
+import SalonHeader from '../components/hero/SalonHeader.astro';
 import SiteFooter from "../components/SiteFooter.astro";
 import Divider from "../components/primitives/Divider.astro";
 import GhostButton from "../components/primitives/GhostButton.astro";
@@ -8,7 +8,7 @@ import { Picture } from "astro:assets";
 import { scene } from "../lib/images";
 ---
 <Base title="About — MiLAEDiA" description="MiLAEDiA sits between two traditions: Persian weaving, and the European rooms these pieces are chosen for.">
-  <SiteHeader current="/about" />
+  <SalonHeader current="/about" />
   <main id="main" class="frame ed">
     <header class="ehead">
       <div class="etext">
@@ -23,13 +23,13 @@ import { scene } from "../lib/images";
       </div>
     </header>
 
-    <div class="chunks">
+    <div class="chunks" data-reveal>
       <section class="chunk"><h2>Between two places</h2><p>The house works across Berlin, Tehran and Budapest. Pieces are sourced and commissioned at the loom, and shown in rooms where they will actually be used — not in a warehouse.</p></section>
       <section class="chunk"><h2>What we look for</h2><p>Hand-spun wool and hand-reeled silk. Natural dyes where they survive. Drawing that holds up close and at distance. Age is not a virtue in itself; how a piece has aged is.</p></section>
       <section class="chunk"><h2>How we work</h2><p>Every piece leaves with a record of its origin, material, weave and dimensions. Where a claim cannot be substantiated, it is not made.</p></section>
     </div>
 
-    <div class="cta">
+    <div class="cta" data-reveal>
       <GhostButton href="/collections">
         View the collections
       </GhostButton>
@@ -41,7 +41,7 @@ import { scene } from "../lib/images";
 <style>
   .ehead { display:grid; grid-template-columns: minmax(0,1fr) minmax(0,.85fr);
     gap: clamp(1.5rem,5vw,4rem); align-items:center;
-    padding-block: clamp(90px,14vh,170px) clamp(2rem,6vh,4rem); }
+    padding-block: clamp(2.5rem, 7vh, 5rem) clamp(2rem,6vh,4rem); }
   .etext { display:grid; gap:1.1rem; justify-items:start; }
   .eyebrow { margin:0; font-family: var(--font-display); font-size: var(--type-descriptor);
     letter-spacing: var(--track-cities); text-transform:uppercase; color: var(--bronze); }
